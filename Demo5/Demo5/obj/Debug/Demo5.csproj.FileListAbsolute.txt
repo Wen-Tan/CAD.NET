@@ -1,0 +1,6 @@
+D:\Project\CAD\Demo5\Demo5\bin\Debug\Demo5.dll
+D:\Project\CAD\Demo5\Demo5\bin\Debug\Demo5.pdb
+D:\Project\CAD\Demo5\Demo5\obj\Debug\Demo5.csprojAssemblyReference.cache
+D:\Project\CAD\Demo5\Demo5\obj\Debug\Demo5.csproj.CoreCompileInputs.cache
+D:\Project\CAD\Demo5\Demo5\obj\Debug\Demo5.dll
+D:\Project\CAD\Demo5\Demo5\obj\Debug\Demo5.pdb
