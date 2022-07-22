@@ -151,6 +151,7 @@ namespace 求一个钻孔和等高线的交点
             {
                 Application.ShowAlertDialog(e.Message);
             }
+
             // 解锁文档
             docLock.Dispose();
         }
@@ -167,6 +168,7 @@ namespace 求一个钻孔和等高线的交点
 
             docLock.Dispose();
         }
+
         //计算指北针角度
         public double getCompassAngle(BlockTableRecord btr, Transaction trans)
         {
@@ -203,6 +205,7 @@ namespace 求一个钻孔和等高线的交点
             }
             return angle_zhibeizhen;
         }
+
         //返回钻孔实体
         public Entity SearchDrill(BlockTableRecord btr, Transaction trans)
         {
@@ -227,6 +230,7 @@ namespace 求一个钻孔和等高线的交点
             }
             return null;
         }
+
         //钻孔角度
         public double getDrillAngle(Entity entity)
         {
@@ -236,6 +240,7 @@ namespace 求一个钻孔和等高线的交点
             //Application.DocumentManager.MdiActiveDocument.Editor.WriteMessage(string.Format("{0}",line1.StartPoint));//输出这条直线的起点信息。
             return angle_zuankong;
         }
+
         //等高线
         public void isoheight(BlockTableRecord btr, Transaction trans, List<double> zcha, List<double> zhenliex, List<double> zhenliey, List<double> zhenliez, Entity entity1, Point3dCollection points, Point3dCollection points1)
         {
@@ -279,6 +284,7 @@ namespace 求一个钻孔和等高线的交点
                 Application.DocumentManager.MdiActiveDocument.Editor.WriteMessage(string.Format("\n巷道线点{0}", po));
             }*/
         }
+
         //处理交点
         public void Process_jiaodian(Point3dCollection points, Point3dCollection points1, List<Point3d> jiaodian, List<double> zhenliez)
         {
@@ -295,6 +301,7 @@ namespace 求一个钻孔和等高线的交点
                 Application.DocumentManager.MdiActiveDocument.Editor.WriteMessage(string.Format("\n巷道交点{0}", point3D));
             }
         }
+
         //计算巷道间隔
         public double getHangdaojiange(Point3dCollection points1)
         {
@@ -310,6 +317,7 @@ namespace 求一个钻孔和等高线的交点
             }
             return hangdao_jiange;
         }
+
         //生成等高线
         public void GenerateIsoheight(BlockTableRecord btr, Transaction trans, List<double> newzcha, double s, double zhenliex1)
         {
@@ -357,6 +365,7 @@ namespace 求一个钻孔和等高线的交点
                 trans.AddNewlyCreatedDBObject(inserDimension1, true);
             }
         }
+
         //计算交点
         public void Calculate_jiaodian(BlockTableRecord btr, Transaction trans, List<Point3d> jiaodian, List<Point3d> jiaodian1, Point3dCollection point3d)
         {
@@ -379,6 +388,7 @@ namespace 求一个钻孔和等高线的交点
                 }
             }
         }
+
         //计算煤层拟合点
         public void CoalSeam(List<Point3d> jiaodian1, Point3dCollection point3d2, Point3dCollection point3d22)
         {
@@ -390,6 +400,7 @@ namespace 求一个钻孔和等高线的交点
                 point3d2.Add(po);
             }
         }
+
         //生成煤层线
         public void GenerateCoalSeam(BlockTableRecord btr, Transaction trans, Spline spline, Spline spline1)
         {
@@ -403,6 +414,7 @@ namespace 求一个钻孔和等高线的交点
             btr.AppendEntity(spline1);
             trans.AddNewlyCreatedDBObject(spline1, true);
         }
+
         //计算巷道坐标z
         public double CalculHangdaoz(List<Point3d> jiaodian1, Line zuankong)
         {
@@ -418,6 +430,7 @@ namespace 求一个钻孔和等高线的交点
             double zhangdao = jiaodian1[biaoji - 1].Z + 20 * (zuankong.StartPoint.X - jiaodian1[biaoji - 1].X) / (jiaodian1[biaoji].X - jiaodian1[biaoji - 1].X);
             return zhangdao;
         }
+
         //生成巷道
         public void GenerateTunnel(BlockTableRecord btr, Transaction trans, double zhangdao, double xhangdao, double yhangdao, Spline spline, double hangdao_jiange)
         {
@@ -451,6 +464,7 @@ namespace 求一个钻孔和等高线的交点
             btr.AppendEntity(hangdao_polyline);
             trans.AddNewlyCreatedDBObject(hangdao_polyline, true);
         }
+
         //计算钻孔z坐标
         public double CalculDrillz(List<Point3d> jiaodian1, Line zuankong)
         {
@@ -466,6 +480,7 @@ namespace 求一个钻孔和等高线的交点
             double zuankong_z = jiaodian1[biaoji1 - 1].Z + 20 * (zuankong.EndPoint.X - jiaodian1[biaoji1 - 1].X) / (jiaodian1[biaoji1].X - jiaodian1[biaoji1 - 1].X);
             return zuankong_z;
         }
+
         //生成钻孔
         public void GenerateDrill(BlockTableRecord btr, Transaction trans, Point3d zuankongEnd, Point3d zuankongStart, Line zuankong_line)
         {
@@ -479,6 +494,7 @@ namespace 求一个钻孔和等高线的交点
             btr.AppendEntity(zuankong_line);
             trans.AddNewlyCreatedDBObject(zuankong_line, true);
         }
+
         //计算方位角
         public double CalculAzimuth(double angle_zhibeizhen, double angle_zuankong)
         {
@@ -493,6 +509,7 @@ namespace 求一个钻孔和等高线的交点
             }
             return angle;
         }
+
         //计算倾角
         public double CalculDip(Point3d zuankongEnd, Point3d zuankongStart)
         {
@@ -501,6 +518,7 @@ namespace 求一个钻孔和等高线的交点
             double tanAngleValue = tanRadianValue2 / Math.PI * 180;//求角度
             return tanAngleValue;
         }
+
         //插入文字到指定位置
         public void InsertText(BlockTableRecord btr, Transaction trans, double angle, double tanAngleValue, Line zuankong_line, double zhenliex1)
         {
@@ -515,7 +533,6 @@ namespace 求一个钻孔和等高线的交点
             String dimension_angle = null;
             //Application.DocumentManager.MdiActiveDocument.Editor.WriteMessage(string.Format("\n指北针角度{0}", angle_zhibeizhen));
             //Application.DocumentManager.MdiActiveDocument.Editor.WriteMessage(string.Format("\n钻孔角度{0}", angle_zuankong));
-
 
             if (zuankong_line.Angle > 180)
             {

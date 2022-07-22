@@ -2,7 +2,7 @@
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <StartAction>Program</StartAction>
-    <StartProgram>D:\软件\Autodesk AutoCAD 2019 Lite\AutoCAD 2019\acad.exe</StartProgram>
+    <StartProgram>D:\软件\AutoCAD2016\AutoCAD 2016\acad.exe</StartProgram>
   </PropertyGroup>
   <PropertyGroup>
     <ReferencePath>D:\Project\MGMS\xwy-mgms-cad\packages\</ReferencePath>
