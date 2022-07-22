@@ -4,3 +4,9 @@ D:\Project\CAD\Demo4\Demo4\obj\Debug\Demo4.csprojAssemblyReference.cache
 D:\Project\CAD\Demo4\Demo4\obj\Debug\Demo4.csproj.CoreCompileInputs.cache
 D:\Project\CAD\Demo4\Demo4\obj\Debug\Demo4.dll
 D:\Project\CAD\Demo4\Demo4\obj\Debug\Demo4.pdb
+D:\Project\CAD.NET\Demo4\Demo4\bin\Debug\Demo4.dll
+D:\Project\CAD.NET\Demo4\Demo4\bin\Debug\Demo4.pdb
+D:\Project\CAD.NET\Demo4\Demo4\obj\Debug\Demo4.csprojAssemblyReference.cache
+D:\Project\CAD.NET\Demo4\Demo4\obj\Debug\Demo4.csproj.CoreCompileInputs.cache
+D:\Project\CAD.NET\Demo4\Demo4\obj\Debug\Demo4.dll
+D:\Project\CAD.NET\Demo4\Demo4\obj\Debug\Demo4.pdb
