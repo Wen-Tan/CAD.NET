@@ -12,8 +12,6 @@ using System.Threading.Tasks;
 
 
 
-
-
 namespace 求一个钻孔和等高线的交点
 {
     public class Class1
@@ -552,7 +550,7 @@ namespace 求一个钻孔和等高线的交点
             inserDimension_angle.Attachment = AttachmentPoint.MiddleCenter;
             inserDimension_angle.Layer = "0";
             btr.AppendEntity(inserDimension_angle);
-            trans.AddNewlyCreatedDBObject(inserDimension_angle, true);
+            trans.AddNewlyCreatedDBObject(inserDimension_angle,true);
         }
     }
 }
