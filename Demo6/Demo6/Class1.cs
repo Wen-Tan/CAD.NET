@@ -10,15 +10,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-
 namespace 求一个钻孔和等高线的交点
 {
     public class Class1
     {
         [CommandMethod("PLVCG")]
         //需要在命令行输入这个命令PLVCG
-
 
         public void PLineVertexCoordsGet()
         {
@@ -46,7 +43,8 @@ namespace 求一个钻孔和等高线的交点
                     List<double> zhenliey = new List<double>();
                     List<double> zhenliez = new List<double>();
                     List<Point3d> jiaodian = new List<Point3d>();
-                    double zcha1 = 0, zhenliex1 = 0, zhenliey1 = 0, zhenliez1 = 0;
+                    double zhenliex1 = 0;
+                    //double zcha1 = 0, zhenliex1 = 0, zhenliey1 = 0, zhenliez1 = 0;
                     double angle_zhibeizhen = 0, angle_zuankong = 0, angle = 0;
                     //计算指北针角度
                     angle_zhibeizhen = getCompassAngle(btr, trans);
