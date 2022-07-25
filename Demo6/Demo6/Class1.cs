@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace 求一个钻孔和等高线的交点
 {
     public class Class1
